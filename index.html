@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tug'ilgan Kuning Muborak Bo'lsin, Nodira! 🎂✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Canvas Elements for Visual Effects -->
+  <canvas id="fireworksCanvas"></canvas>
+  <canvas id="sparklesCanvas"></canvas>
+
+  <!-- Background Floating Ambient Elements -->
+  <div class="ambient-stars" id="ambientStars"></div>
+  <div class="floating-hearts" id="floatingHearts"></div>
+
+  <!-- Music Player Toggle Button -->
+  <div class="music-controller" id="musicController" title="Musiqani yoqish/o'chirish">
+    <div class="vinyl-disk" id="vinylDisk">
+      <div class="vinyl-center">🎵</div>
+    </div>
+    <span class="music-status-text" id="musicStatusText">Happy Birthday 🎶</span>
+  </div>
+
+  <!-- Background Audio Element -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- STEP 1: INITIAL WELCOME MODAL / GIFT BOX -->
+  <div class="welcome-overlay" id="welcomeOverlay">
+    <div class="welcome-card">
+      <div class="gift-icon-container" id="giftBoxBtn">
+        <div class="gift-glow"></div>
+        <div class="gift-emoji">🎁</div>
+        <div class="gift-tap-hint">Ochish uchun bosing! ✨</div>
+      </div>
+      <h2 class="welcome-title">Maxsus Bir Inson Uchun... 💖</h2>
+      <p class="welcome-desc">Ushbu sahifa bugungi eng go'zal bayraming — tavallud ayyoming uchun mehr bilan
+        tayyorlandi. Musiqa bilan ochishga tayyormisan?</p>
+      <button class="btn-magic-start" id="startCelebrationBtn">
+        <span>Sehrli Tabrikni Ochish ✨</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- MAIN EXPERIENCE CONTAINER -->
+  <main class="main-container" id="mainContainer">
+
+    <!-- HERO SECTION -->
+    <header class="hero-section">
+      <div class="badge-pill">🌸 Bugun Seni Kuni 🌸</div>
+      <h1 class="hero-title animate-glow">
+        Tug'ilgan Kuning <br><span class="highlight-text">Muborak Bo'lsin, Nodira!</span> 🎂✨
+      </h1>
+      <p class="hero-subtitle">
+        Dunyoga kelgan kuning qutlug' bo'lsin, ey nurli va samimiy qalb sohibasi!
+      </p>
+      <div class="scroll-down-indicator">
+        <span>Senga atalgan xat</span>
+        <div class="arrow-bounce">↓</div>
+      </div>
+    </header>
+
+    <!-- SECTION 1: THE HEARTFELT LETTER -->
+    <section class="letter-section" id="letterSection">
+      <div class="envelope-wrapper">
+        <div class="letter-paper">
+          <div class="letter-stamp">💌</div>
+          <h2 class="letter-heading">Yurakdan Chiqqan Samimiy Tilaklarim ✨</h2>
+          <div class="letter-divider"></div>
+
+          <div class="letter-content">
+            <p class="p-lead">
+              <strong>Tug`ilgan kuning bilan, Nodira! 🌸</strong>
+            </p>
+            <p>
+              Bugun sen dunyoga kelib, bu hayotni yana-da go'zallashtirgan, atrofga o'zgacha nur va mehr olib kirgan
+              kun. Tavallud ayyoming bilan chin qalbimdan muborakbod etaman!
+            </p>
+            <p>
+              Sening samimiyliging, qalbingdagi beg'uborlik, ko'zlaringdagi ma'sumona quvonch va har bir jilmayishing
+              atrofingdagilar ko'ngliga doimo iliqlik va huzur bag'ishlaydi. Sen bor joyda hamisha fayz, go'zallik va
+              iliq muhit hukmron.
+            </p>
+            <p>
+              Ushbu yangi yoshing senga dunyodagi eng go'zal onlar, cheksiz baxt, mustahkam salomatlik va
+              bitmas-tuganmas quvonch olib kelsin. Qalbingda asrab yurgan, tunda yulduzlarga aytgan barcha orzu va
+              niyatlaring o'ylaganingdan-da a'lo darajada ijobat bo'lsin!
+            </p>
+            <p class="p-wish-highlight">
+              ✨ Har doim shunday latofatli, nozik ta'bli va baxtdan ko'zlari porlab turuvchi eng sevimli inson bo'lib
+              yur! Yuzingdagi o'sha sehrli tabassum hech qachon so'nmasin! 💖🌸
+            </p>
+            <div class="letter-sign">
+              <span>Eng samimiy va ezgu tilaklar bilan... ✨</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: PHOTO GALLERY -->
+    <section class="gallery-section" id="gallerySection">
+      <div class="section-header">
+        <div class="section-badge">📸 Shirin Xotiralar</div>
+        <h2 class="section-title">Eng Go'zal va Unutilmas Lahzalar 💫</h2>
+        <p class="section-desc">Har bir suratingda o'zgacha bir nafosat, quvonch va samimiyat bor...</p>
+      </div>
+
+      <div class="photos-grid">
+        <!-- Photo 1 -->
+        <div class="polaroid-card" style="--rotation: -2.5deg;">
+          <div class="card-pin">📌</div>
+          <div class="img-wrapper">
+            <img src="IMAGE 2026-10-09 23:21:34.jpg" alt="Go'zal lahza" loading="lazy">
+          </div>
+          <div class="polaroid-caption">Beg'ubor nigohlar ✨</div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="polaroid-card" style="--rotation: 3deg;">
+          <div class="card-pin">🌸</div>
+          <div class="img-wrapper">
+            <img src="IMAGE 2026-10-09 23:21:38.jpg" alt="Go'zal lahza" loading="lazy">
+          </div>
+          <div class="polaroid-caption">Samimiy tabassum 💖</div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="polaroid-card" style="--rotation: -3.5deg;">
+          <div class="card-pin">⭐</div>
+          <div class="img-wrapper">
+            <img src="IMAGE 2026-10-09 23:21:41.jpg" alt="Go'zal lahza" loading="lazy">
+          </div>
+          <div class="polaroid-caption">O'zgacha latofat 🌷</div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="polaroid-card" style="--rotation: 2deg;">
+          <div class="card-pin">🎀</div>
+          <div class="img-wrapper">
+            <img src="IMAGE 2026-10-09 23:21:43.jpg" alt="Go'zal lahza" loading="lazy">
+          </div>
+          <div class="polaroid-caption">Yurakdagi go'zallik 💫</div>
+        </div>
+
+        <!-- Photo 5 -->
+        <div class="polaroid-card" style="--rotation: -2deg;">
+          <div class="card-pin">💖</div>
+          <div class="img-wrapper">
+            <img src="IMAGE 2026-10-09 23:21:45.jpg" alt="Go'zal lahza" loading="lazy">
+          </div>
+          <div class="polaroid-caption">Nafis va quvnoq on 💐</div>
+        </div>
+
+        <!-- Photo 6 -->
+        <div class="polaroid-card" style="--rotation: 3.5deg;">
+          <div class="card-pin">✨</div>
+          <div class="img-wrapper">
+            <img src="IMAGE 2026-10-09 23:21:48.jpg" alt="Go'zal lahza" loading="lazy">
+          </div>
+          <div class="polaroid-caption">Sehrli lahzalar 🌟</div>
+        </div>
+
+        <!-- Photo 7 -->
+        <div class="polaroid-card" style="--rotation: -1.5deg;">
+          <div class="card-pin">🎈</div>
+          <div class="img-wrapper">
+            <img src="IMAGE 2026-10-09 23:21:49.jpg" alt="Go'zal lahza" loading="lazy">
+          </div>
+          <div class="polaroid-caption">Qalb charog'oni 🌺</div>
+        </div>
+
+        <!-- Photo 8 -->
+        <div class="polaroid-card" style="--rotation: 2.8deg;">
+          <div class="card-pin">👑</div>
+          <div class="img-wrapper">
+            <img src="IMAGE 2026-10-09 23:21:51.jpg" alt="Go'zal lahza" loading="lazy">
+          </div>
+          <div class="polaroid-caption">Eng yorqin yulduz ⭐</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: INTERACTIVE BIRTHDAY CAKE & CANDLE BLOWING -->
+    <section class="cake-section" id="cakeSection">
+      <div class="cake-container-card">
+        <div class="section-badge">🎂 Niyat Qilish Vaqti</div>
+        <h2 class="section-title">Shamlarni O'chiring! 🕯️</h2>
+        <p class="section-desc">
+          Ko'nglingizdagi eng beg'ubor va ezgu tilakni dildan o'tkazib, shamlarni puflab o'chiring!
+        </p>
+
+        <!-- Birthday Cake Visual -->
+        <div class="cake-stage">
+          <div class="cake-plate"></div>
+
+          <div class="cake-body">
+            <!-- Top Frosting Decor -->
+            <div class="cake-layer cake-layer-top">
+              <div class="frosting-drips">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="cake-layer cake-layer-middle"></div>
+            <div class="cake-layer cake-layer-bottom"></div>
+
+            <!-- CANDLES -->
+            <div class="candles-wrapper" id="candlesWrapper">
+              <!-- Candle 1 -->
+              <div class="candle" id="candle1">
+                <div class="flame" id="flame1"></div>
+                <div class="smoke" id="smoke1"></div>
+                <div class="wick"></div>
+                <div class="candle-stick"></div>
+              </div>
+              <!-- Candle 2 (Center) -->
+              <div class="candle" id="candle2">
+                <div class="flame" id="flame2"></div>
+                <div class="smoke" id="smoke2"></div>
+                <div class="wick"></div>
+                <div class="candle-stick"></div>
+              </div>
+              <!-- Candle 3 -->
+              <div class="candle" id="candle3">
+                <div class="flame" id="flame3"></div>
+                <div class="smoke" id="smoke3"></div>
+                <div class="wick"></div>
+                <div class="candle-stick"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Action Button -->
+        <div class="cake-controls">
+          <button class="btn-blow-candle" id="blowCandleBtn">
+            <span class="btn-icon">💨</span>
+            <span class="btn-text">Shamlarni Puflab O'chirish 🕯️</span>
+          </button>
+          <p class="candle-hint" id="candleHintText">Tugmani bosing yoki shamlar ustiga bosing!</p>
+        </div>
+
+        <!-- Success Message after Blowing -->
+        <div class="wish-granted-banner" id="wishGrantedBanner">
+          <div class="wish-icon">🎉✨</div>
+          <h3>Barcha Ezgu Niyatlaringiz Ijobat Bo'lsin! 💖</h3>
+          <p>Yangi yoshingiz omad, cheksiz baxt va bitmas-tuganmas quvonch olib kelsin!</p>
+          <button class="btn-more-fireworks" id="fireworksMoreBtn">Yana Mushakbozlik Otilsin! 🎆</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: SWEET WISHES COMPASS -->
+    <section class="wishes-grid-section">
+      <div class="section-header">
+        <div class="section-badge">✨ Senga Tilaklarim</div>
+        <h2 class="section-title">Hayotingda Doimo Bo'lsin:</h2>
+      </div>
+
+      <div class="wishes-cards-container">
+        <div class="wish-item">
+          <div class="wish-emoji">🌸</div>
+          <h4>Cheksiz Baxt</h4>
+          <p>Har bir tonging tabassum, qalbing esa xotirjamlik bilan nurlansin.</p>
+        </div>
+        <div class="wish-item">
+          <div class="wish-emoji">💎</div>
+          <h4>Mustahkam Sog'lik</h4>
+          <p>Tanu-joning doimo salomat, o'zing esa shunday quvnoq va maftunkor bo'l.</p>
+        </div>
+        <div class="wish-item">
+          <div class="wish-emoji">🌟</div>
+          <h4>Yuksak Zafarlar</h4>
+          <p>Qo'ygan har bir maqsadingga osonlik va yorug' yuz bilan yetish!</p>
+        </div>
+        <div class="wish-item">
+          <div class="wish-emoji">💝</div>
+          <h4>Samimiy Muhabbat</h4>
+          <p>Atrofingda faqat seni ardoqlovchi, qadringga yetuvchi samimiy insonlar bo'lsin.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="birthday-footer">
+      <div class="footer-heart">💖</div>
+      <p class="footer-title">Tug'ilgan kuning muborak bo'lsin, Nodira!</p>
+      <p class="footer-sub">Dunyoning eng go'zal quvonchlari senga hamroh bo'lsin ✨</p>
+    </footer>
+  </main>
+
+  <!-- LIGHTBOX MODAL FOR FULLSCREEN PHOTO VIEW -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <img id="lightboxImg" src="" alt="Kattalashtirilgan rasm">
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
